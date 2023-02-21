@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.itcast.demo</groupId>
-    <artifactId>cloud-demo</artifactId>
+    <artifactId>cloud-demo01</artifactId>
     <version>1.0</version>
     <modules>
         <module>user-service</module>
         <module>order-service</module>
-        <module>eureka-server</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -54,6 +53,7 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
+<!--            SpringCloudAlibaba-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>

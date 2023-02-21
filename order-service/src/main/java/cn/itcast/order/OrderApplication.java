@@ -14,16 +14,16 @@ import org.springframework.web.client.RestTemplate;
 public class OrderApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(OrderApplication.class, args);
     }
 
     @Bean
-    @LoadBalanced
+    @LoadBalanced//开启负载均衡
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
+    //自定义负载均衡
     @Bean
     public IRule randomRule(){
         return new RandomRule();

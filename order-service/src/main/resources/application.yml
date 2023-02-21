@@ -9,26 +9,27 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: orderservice # 服务名称
-#  cloud:
-#    nacos:
-#      server-addr: localhost:8848
-#      discovery:
-#        cluster-name: HZ # 集群名称
-#        namespace:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster-name: HZ # 集群名称
+#       namespace:
 
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
     map-underscore-to-camel-case: true
+
 logging:
   level:
     cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:10086/eureka # 注册中心地址
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka # 注册中心地址
 #
 userservice: # 给某个微服务配置负载均衡规则，这里是userservice服务
   ribbon:
